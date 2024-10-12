@@ -114,7 +114,7 @@ const personGenerator = {
             "id_4": "Июля",
             "id_5": "Августа",
             "id_6": "Октяря",
-            "id_7": "Декабря",
+            "id_7": "Декабря"
         }
     }`,
 
@@ -124,14 +124,14 @@ const personGenerator = {
             "id_1": "Апреля",
             "id_2": "Июня",
             "id_3": "Сентября",
-            "id_4": "Ноября",
+            "id_4": "Ноября"
         }
     }`,
 
     month28Json: `{
         "count": 1,
         "list": {     
-            "id_1": "Февраля",
+            "id_1": "Февраля"
         }
     }`,
 
@@ -221,7 +221,7 @@ const personGenerator = {
             month = this.randomValue(this.month30Json);
             day = this.randomIntNumber(30, 1);
           //  console.log(year, month, day);
-      } else 
+        } else 
         if (Math.floor(Math.random() * 2) == 2) {
             year = this.randomIntNumber(2006, 1960);
             month = this.randomValue(this.month28Json);
@@ -230,10 +230,8 @@ const personGenerator = {
               } else {
                     day = this.randomIntNumber(29, 1);
               }
-        //console.log(year, month, day);
         }
-        birthday = day + month + year + " года рождения"; 
-        console.log(year);
+        birthday = day + ' ' + month + ' ' + year + " года рождения"; 
         return birthday;
       },
 

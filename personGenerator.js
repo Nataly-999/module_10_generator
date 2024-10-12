@@ -135,7 +135,6 @@ const personGenerator = {
         }
     }`,
 
-
     GENDER_MALE: 'Мужчина',
     GENDER_FEMALE: 'Женщина',
 
@@ -175,54 +174,20 @@ const personGenerator = {
         }
     },
 
-/*    randomYear: function(){
-       year = this.randomIntNumber(1960, 2010);
- },*/
-
-   /* randomDay: function() { //генерация числа
-        return this.randomIntNumber(1, 31);
-    },*/
-
-
-   /* randomBirthday: function() { //генерация числа
-      if  (Math.floor(Math.random() * 3) == 0) {
-        month = this.randomValue(this.month31Json);
-        day = this.randomIntNumber(1, 31);
-        console.log(year, month, day);
-      } else 
-      if (Math.floor(Math.random() * 2) == 1) {
-        month = this.randomValue(this.month30Json);
-        day = this.randomIntNumber(1, 30);
-        console.log(year, month, day);
-    } else 
-      if (Math.floor(Math.random() * 2) == 2) {
-        month = this.randomValue(this.month28Json);
-            if (year % 4 == 0) {
-                day = this.randomIntNumber(1, 28);
-            } else {
-                day = this.randomIntNumber(1, 29);
-            }
-            console.log(year, month, day);
-        }
-      birthday = day + month + year + "года рождения"; 
-      console.log(year, month, day);
-      return birthday;
-    },*/
-
     randomBirthday: function() { //генерация даты рождения
-        if  (Math.floor(Math.random() * 3) == 0) {
+        if (Math.floor(Math.random() * 3) == 0) {
             year = this.randomIntNumber(2006, 1960);
             month = this.randomValue(this.month31Json);
             day = this.randomIntNumber(31, 1);
-            //console.log(year, month, day);
+            console.log(year, month, day, "31");
         } else 
-        if (Math.floor(Math.random() * 2) == 1) {
+        if (Math.floor(Math.random() * 3) == 1) {
             year = this.randomIntNumber(2006, 1960);
             month = this.randomValue(this.month30Json);
             day = this.randomIntNumber(30, 1);
-          //  console.log(year, month, day);
+            console.log(year, month, day, "30");
         } else 
-        if (Math.floor(Math.random() * 2) == 2) {
+        if (Math.floor(Math.random() * 3) == 2) {
             year = this.randomIntNumber(2006, 1960);
             month = this.randomValue(this.month28Json);
                 if (year % 4 == 0) {
@@ -230,8 +195,12 @@ const personGenerator = {
               } else {
                     day = this.randomIntNumber(29, 1);
               }
+            console.log(year, month, day, "28, 29"); 
         }
         birthday = day + ' ' + month + ' ' + year + " года рождения"; 
+        //console.log(day);
+        //console.log(month);
+       //console.log(year);
         return birthday;
       },
 

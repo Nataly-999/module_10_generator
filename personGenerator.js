@@ -174,7 +174,7 @@ const personGenerator = {
         }
     },
 
-    randomBirthday: function() { //генерация даты рождения
+    randomBirthday: function() { //Генерация даты рождения
         if (Math.floor(Math.random() * 3) == 0) {
             year = this.randomIntNumber(2006, 1960);
             month = this.randomValue(this.month31Json);

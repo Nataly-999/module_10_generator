@@ -12,8 +12,6 @@ window.onload = function()
     document.getElementById('birthdayOutput').innerText = initPerson.birthday;
 });
 document.querySelector('#clean').addEventListener('click', function() {
-    //event.preventDefault();
-//const initPerson = personGenerator.getPerson();
 document.getElementById('firstNameOutput').innerText = '';
 document.getElementById('middleNameOutput').innerText = '';
 document.getElementById('surnameOutput').innerText = '';

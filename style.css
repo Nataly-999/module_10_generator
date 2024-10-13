@@ -1,0 +1,27 @@
+h3, h4 {
+    color: rgb(47, 157, 51);
+}
+
+.card-header {
+background-color: aquamarine;
+}
+
+.m-0 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(91, 91, 194);
+}
+
+.card-body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: blanchedalmond;
+}
+
+h5 {
+    color: rgb(221, 84, 84);
+}
+
+h6 {
+    color: rgb(91, 91, 194);
+}
+
+

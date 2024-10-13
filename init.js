@@ -11,5 +11,16 @@ window.onload = function()
     document.getElementById('professionOutput').innerText = initPerson.profession;
     document.getElementById('birthdayOutput').innerText = initPerson.birthday;
 });
+document.querySelector('#clean').addEventListener('click', function() {
+    //event.preventDefault();
+//const initPerson = personGenerator.getPerson();
+document.getElementById('firstNameOutput').innerText = '';
+document.getElementById('middleNameOutput').innerText = '';
+document.getElementById('surnameOutput').innerText = '';
+document.getElementById('genderOutput').innerText = '';
+document.getElementById('professionOutput').innerText = '';
+document.getElementById('birthdayOutput').innerText = '';
+});
+
 };
 

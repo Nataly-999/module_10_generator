@@ -5,7 +5,7 @@ let birthday;
 
 const personGenerator = {
     surnameJson: `{  
-        "count": 15,
+        "count": 16,
         "list": {
             "id_1": "Иванов",
             "id_2": "Смирнов",

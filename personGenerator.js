@@ -2,6 +2,7 @@ let year;
 let month = '';
 let day;
 let birthday; 
+let middleName;
 
 const personGenerator = {
     surnameJson: `{  
@@ -54,22 +55,6 @@ const personGenerator = {
             "id_8": "Екатерина",
             "id_9": "Ольга",
             "id_10": "Елена"
-        }
-    }`,
-
-    middleNameJson: `{
-        "count": 10,
-        "list": {     
-            "id_1": "Алексеев",
-            "id_2": "Александров",
-            "id_3": "Владиславов",
-            "id_4": "Викторов",
-            "id_5": "Михаилов",
-            "id_6": "Борисов",
-            "id_7": "Дмитриев",
-            "id_8": "Олегов",
-            "id_9": "Андреев",
-            "id_10": "Иванов"
         }
     }`,
 
@@ -152,11 +137,27 @@ const personGenerator = {
     },
 
     randomMiddleName: function() { //Генерация Отчества
+        middleName = this.randomValue(this.firstNameMaleJson);
         if (this.person.gender == 'Мужчина') {
-            return this.randomValue(this.middleNameJson) + "ич";
-        } else {
-            return this.randomValue(this.middleNameJson) + "на";
+            if (middleName.includes('й')) {
+                middleName = middleName.replace("й", "евич");
+            } else
+            if (middleName.includes('Никита')) {
+                middleName = middleName.replace("а", "ич");
+            } else
+                middleName = middleName + "ович";
+        } else
+ 
+        if (this.person.gender == 'Женщина') {
+            if (middleName.includes('й')) {
+                middleName = middleName.replace("й", "евна");
+            } else
+            if (middleName.includes('Никита')) {
+                middleName = middleName.replace("а", "ична");
+            } else
+                middleName = middleName + "овна"; 
         }
+        return middleName;
     },
 
      randomSurname: function() { //Генерация Фамилии
